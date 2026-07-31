@@ -1,16 +1,20 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/tojibox/tojibox-app/main/public/tojibox-wordmark.svg" alt="Tojibox" width="280" />
-  <h3>Decentralized Land Registry & Due Diligence Protocol</h3>
-  <p>Built on <a href="https://docs.giwa.io">GIWA</a> — an OP-Stack EVM L2</p>
+  <h3>The Due Diligence Platform for Real Estate</h3>
+  <p>Verifiable zoning &amp; parcel history, anchored on-chain — built on <a href="https://docs.giwa.io">GIWA</a>, an OP-Stack EVM L2</p>
 </div>
 
 ---
 
+## Vision
+
+Tojibox's goal is to become the **primary due-diligence platform for real estate in the United States** — the first place a real estate investor, attorney, lender, or Web3 protocol goes to pull a fast, cryptographically verifiable zoning and parcel report. We're proving the model in **Wake County, NC** today (435k+ parcels, live on-chain oracle) — the pilot for a scraping and oracle architecture built to scale across all **3,000+ US counties**, each sitting on the same siloed zoning data Wake County had.
+
 ## What Tojibox does
 
-Web3 platforms that tokenize land or lend against real estate — RWA protocols, fractional-ownership platforms, on-chain lenders — currently pay third-party vendors thousands of dollars per deal for zoning due diligence, because county zoning history and rezoning-petition records are siloed, unstructured, and scattered across government portals.
+Real estate due diligence today — for investors, attorneys, lenders, and Web3 platforms tokenizing or lending against land alike — means paying third-party vendors thousands of dollars per deal, because county zoning history and rezoning-petition records are siloed, unstructured, and scattered across government portals.
 
-Tojibox turns Wake County, NC parcel and rezoning data into a cryptographically verifiable on-chain oracle: change events are Merkle-batched and committed to GIWA, due-diligence reports are ECDSA-signed by the oracle, and every issued report is minted as an on-chain ERC-721 receipt — so any counterparty can verify a report's authenticity in seconds by checking chain state directly, not by trusting Tojibox.
+Tojibox turns county parcel and rezoning data into a cryptographically verifiable on-chain oracle: change events are Merkle-batched and committed to GIWA, due-diligence reports are ECDSA-signed by the oracle, and every issued report is minted as an on-chain ERC-721 receipt — so any counterparty can verify a report's authenticity in seconds by checking chain state directly, not by trusting Tojibox.
 
 📄 **[Full architecture one-pager →](../ONE-PAGER.md)**
 

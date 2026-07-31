@@ -1,28 +1,34 @@
 <div align="center">
   <h1>Tojibox</h1>
-  <p><strong>Decentralized Land Registry & Due Diligence Protocol</strong></p>
-  <p>Built on <a href="https://docs.giwa.io">GIWA</a> — an OP-Stack EVM L2</p>
+  <p><strong>The Due Diligence Platform for Real Estate</strong></p>
+  <p>Verifiable zoning &amp; parcel history, anchored on-chain — built on <a href="https://docs.giwa.io">GIWA</a>, an OP-Stack EVM L2</p>
 </div>
 
 ---
 
+## Vision
+
+Tojibox's goal is to become the **primary due-diligence platform for real estate in the United States** — the first place a real estate investor, attorney, lender, or Web3 protocol goes to pull a fast, cryptographically verifiable zoning and parcel report, instead of waiting weeks on a manual vendor process.
+
+We're proving the model today in **Wake County, NC** — 435k+ parcels, full rezoning-petition history, live on-chain oracle. That's the pilot, not the ceiling: the scraping and oracle architecture is built to extend county-by-county, and the US has **3,000+ counties and county-equivalents**, each sitting on the same siloed, unstructured zoning data Wake County had. Scaling coverage nationally is the core roadmap from here.
+
 ## The Problem
 
-Web3 platforms that tokenize land or lend against real estate — RWA protocols, fractional-ownership platforms, on-chain lenders — currently pay third-party vendors **$12,000–$20,000 per parcel** and wait **1–2 weeks** just to verify zoning history, before a single token is minted or a dollar is lent.
+Real estate due diligence — verifying zoning history, rezoning risk, and parcel records before a deal closes — is slow and expensive for nearly everyone who needs it: real estate investors underwriting a purchase, attorneys running title and zoning review, lenders, and Web3 platforms tokenizing or lending against land. Buyers today pay third-party vendors **$12,000–$20,000 per parcel** and wait **1–2 weeks**, just to get a static answer.
 
-The root cause: zoning history and rezoning-petition records are siloed at the county level, unstructured, and require manual aggregation. Worse, the resulting report is an unverifiable PDF — every counterparty has to blindly trust the vendor, because there's no cryptographic proof the report is authentic, current, or untampered.
+The root cause: zoning history and rezoning-petition records are siloed at the county level, unstructured, and require manual aggregation — a problem that repeats identically across all 3,000+ US counties. Worse, the resulting report is an unverifiable PDF — every counterparty has to blindly trust the vendor, because there's no cryptographic proof the report is authentic, current, or untampered.
 
 ## The Solution
 
-Tojibox turns Wake County, NC parcel and rezoning data into a cryptographically verifiable on-chain oracle:
+Tojibox turns county parcel and rezoning data into a cryptographically verifiable on-chain oracle — starting with Wake County, NC as the pilot market:
 
-1. A scraping pipeline continuously ingests parcel and rezoning-petition data from Wake County / Raleigh's public ArcGIS and planning APIs.
+1. A scraping pipeline continuously ingests parcel and rezoning-petition data from the county's public ArcGIS and planning APIs.
 2. Detected changes are batched, hashed into a Merkle tree, and committed on-chain to `TojiboxOracle.sol` on GIWA — an immutable, publicly verifiable audit trail of every zoning change.
 3. Users search a parcel, get a free preview, then pay a small x402 fee (0.0001 ETH) to unlock the full due-diligence report.
 4. The report is ECDSA-signed by the oracle and its hash is minted as an ERC-721 receipt (`TojiboxReportReceipt.sol`) directly on GIWA — a durable on-chain record, not an in-memory flag that disappears on a server restart.
 5. Anyone can verify a report's authenticity in seconds — scan the QR code on the PDF, or hit `/verify/{hash}` — by checking chain state directly. No trust in Tojibox required.
 
-Instead of $12K–$20K and two weeks, due diligence becomes **on-demand and cryptographically verifiable, for a fraction of a cent in fees.**
+Instead of $12K–$20K and two weeks, due diligence becomes **on-demand and cryptographically verifiable, for a fraction of a cent in fees** — and the same pipeline is designed to onboard the next county, and the one after that.
 
 ## Architecture
 
