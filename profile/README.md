@@ -12,6 +12,8 @@ Web3 platforms that tokenize land or lend against real estate — RWA protocols,
 
 Tojibox turns Wake County, NC parcel and rezoning data into a cryptographically verifiable on-chain oracle: change events are Merkle-batched and committed to GIWA, due-diligence reports are ECDSA-signed by the oracle, and every issued report is minted as an on-chain ERC-721 receipt — so any counterparty can verify a report's authenticity in seconds by checking chain state directly, not by trusting Tojibox.
 
+📄 **[Full architecture one-pager →](../ONE-PAGER.md)**
+
 ## Repositories
 
 | Repo | What it owns |
