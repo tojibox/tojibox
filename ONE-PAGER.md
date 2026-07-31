@@ -50,7 +50,7 @@ graph TB
     subgraph "tojibox-app"
         MAP[Interactive Parcel Map]
         PDF[Signed PDF Report<br/>QR code + on-chain proof]
-        VERIFY[/verify/:hash]
+        VERIFY["GET /verify/:hash"]
     end
 
     WC --> SC --> CD --> PIPE --> ORACLE
